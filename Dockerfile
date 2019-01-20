@@ -61,4 +61,7 @@ ADD extra/auto-reload-config.runit /etc/service/auto-reload-config/run
 ADD extra/update-ca-certificates.runit /etc/service/update-ca-certificates/run
 
 VOLUME ["/root/.config/oxidized"]
+
+RUN rm -rf /root/.config/oxidized/pid
+
 EXPOSE 8888/tcp
